@@ -115,4 +115,116 @@ footer {
   </div></div><footer>
   © 2026 Jobridge International - Tous droits réservés
 </footer></body>
-</html>
+</html><!-- JOBRIDGE FORM INTEGRATION (WhatsApp + Email) --><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector("input[name='name']")?.value || "";
+    const country = document.querySelector("input[name='country']")?.value || "";
+    const job = document.querySelector("input[name='job']")?.value || "";
+    const message = document.querySelector("textarea[name='message']")?.value || "";
+
+    // 📱 WhatsApp message
+    const whatsappText = `Bonjour Jobridge International,%0A%0ANom: ${name}%0APays: ${country}%0AMétier: ${job}%0AMessage: ${message}`;
+    const whatsappURL = "https://wa.me/261383687272?text=" + whatsappText;
+
+    // 📩 Email
+    const email = "maramahafalyruphin@gmail.com";
+    const subject = "Nouvelle candidature Jobridge";
+    const body = `Nom: ${name}
+Pays: ${country}
+Métier: ${job}
+Message: ${message}`;
+    const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Ouvrir WhatsApp + Email
+    window.open(whatsappURL, "_blank");
+    window.location.href = mailtoURL;
+  });
+});
+</script><!-- 🔥 JOBRIDGE INTERNATIONAL - DESIGN UPGRADE + LOGO --><style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+  }
+
+  header {
+    background: linear-gradient(90deg, #0a66c2, #00bcd4);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+  }
+
+  h1 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  button {
+    background: #0a66c2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  button:hover {
+    background: #084a91;
+  }
+</style><header>
+  <!-- Simple SVG Logo -->
+  <svg class="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="white"/>
+    <text x="50" y="58" font-size="40" text-anchor="middle" fill="#0a66c2">J</text>
+  </svg>  <h1>Jobridge International</h1>
+  <p>Connecting Talent Worldwide 🌍</p>
+</header><!-- END DESIGN UPGRADE --><!-- 🌍 JOBRIDGE INTERNATIONAL - VERSION AGENCE PRO (UPGRADE) --><section class="container">  <div class="card">
+    <h2>🌍 About Jobridge International</h2>
+    <p>
+      Jobridge International is a recruitment initiative based in Madagascar.
+      We connect motivated workers with legal international job opportunities in agriculture, construction, transport, and services.
+    </p>
+  </div>  <div class="card">
+    <h2>🔒 Transparency & Trust</h2>
+    <p>
+      We operate with full transparency. No hidden fees. No illegal recruitment practices.
+      All candidates are verified before being connected to partners.
+    </p>
+  </div>  <div class="card">
+    <h2>🤝 Partnership Opportunities</h2>
+    <p>
+      We are actively looking for cooperation with recruitment agencies, companies, and NGOs worldwide.
+    </p><button onclick="window.open('https://wa.me/261000000000?text=Hello%20I%20want%20to%20partner%20with%20Jobridge%20International','_blank')">
+  Become a Partner
+</button>
+
+  </div>  <div class="card">
+    <h2>📩 Contact Official</h2>
+    <p>Email: jobridge.international@gmail.com</p>
+    <p>WhatsApp: +261 38 36 872 72</p>
+  </div></section>
